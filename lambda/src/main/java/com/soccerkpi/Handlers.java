@@ -35,7 +35,7 @@ public class Handlers {
             .setSerializationInclusion(JsonInclude.Include.NON_NULL);
 
     private static final DynamoDbClient DDB = DynamoDbClient.builder()
-            .region(Region.of(System.getenv().getOrDefault("AWS_REGION", "us-east-1")))
+            .region(Region.of(System.getenv().getOrDefault("AWS_REGION", "us-west-2")))
             .credentialsProvider(DefaultCredentialsProvider.create())
             .build();
 

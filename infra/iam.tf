@@ -15,7 +15,7 @@ resource "aws_iam_role" "lambda_role" {
   assume_role_policy = data.aws_iam_policy_document.lambda_assume_role.json
 }
 
-data "aws_iam_policy_document" "lambda_policy" {
+data "aws_iam_policy_document" "lambda_policy_doc" {
   statement {
     sid    = "AllowDynamoDBAccess"
     effect = "Allow"
@@ -50,8 +50,8 @@ data "aws_iam_policy_document" "lambda_policy" {
 }
 
 resource "aws_iam_policy" "lambda_policy" {
-  name   = "${var.project_name}-lambda-policy"
-  policy = data.aws_iam_policy_document.lambda_policy.json
+  name   = "${var.project_name}-lambda-policy2"
+  policy = data.aws_iam_policy_document.lambda_policy_doc.json
 }
 
 resource "aws_iam_role_policy_attachment" "lambda_policy_attach" {

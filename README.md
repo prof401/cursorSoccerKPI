@@ -67,7 +67,7 @@ Minimal web app to track soccer KPIs during a college game. Frontend is Next.js 
 2. Configure AWS credentials (any standard method, e.g. `aws configure`, SSO, or environment variables) and choose a region:
 
    ```bash
-   export AWS_REGION=us-east-1
+   export AWS_REGION=us-west-2
    ```
 
 3. Deploy infrastructure (DynamoDB tables, Lambda functions, API Gateway HTTP API):
