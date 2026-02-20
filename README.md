@@ -89,7 +89,7 @@ To run the app in production instead of only locally:
 
 1. Push the repo to GitHub and import the project in [Vercel](https://vercel.com).
 2. In the Vercel project **Settings → Environment Variables**, add:
-   - `NEXT_PUBLIC_API_BASE_URL` = your API base URL (e.g. `https://xxxx.execute-api.us-east-1.amazonaws.com` from Terraform output `http_api_url`).
+   - `NEXT_PUBLIC_API_BASE_URL` = your API base URL (e.g. `https://xxxx.execute-api.us-west-2.amazonaws.com` from Terraform output `http_api_url`).
 3. For production, set **CORS** on the API: in Terraform use a variable, e.g. `terraform apply -var='cors_origins=["https://your-app.vercel.app"]'`, or add your production domain to the list.
 4. Redeploy the frontend after any change to `NEXT_PUBLIC_API_BASE_URL` (it is baked in at build time).
 

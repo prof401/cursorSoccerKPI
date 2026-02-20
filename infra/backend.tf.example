@@ -11,7 +11,7 @@
 #   backend "s3" {
 #     bucket         = "YOUR-TERRAFORM-STATE-BUCKET"
 #     key            = "soccer-kpi/terraform.tfstate"
-#     region         = "us-east-1"
+#     region         = "us-west-2"
 #     dynamodb_table = "terraform-state-lock"
 #   }
 # }
